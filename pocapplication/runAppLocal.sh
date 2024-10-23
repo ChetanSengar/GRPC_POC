@@ -8,8 +8,6 @@ check_status() {
   fi
 }
 
-cd GRPC_POC\pocapplication
-
 # Start the build process
 echo "Starting the build process..."
 ./gradlew clean build
