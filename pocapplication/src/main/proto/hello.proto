@@ -1,0 +1,22 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+option java_package = "com.chetan";
+option java_outer_classname = "HelloGrpcProto";
+
+package hello;
+
+service HelloGrpc {
+    rpc GetPersonById (PersonRequest) returns (PersonResponse) {}
+    rpc CreatePerson (PersonRequest) returns (PersonResponse) {}
+}
+
+message PersonRequest {
+    int32 id = 1;
+    string name = 2;
+    string age = 3;
+}
+
+message PersonResponse {
+    string message = 1;
+}
